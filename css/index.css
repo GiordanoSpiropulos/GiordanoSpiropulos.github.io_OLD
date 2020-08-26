@@ -51,7 +51,7 @@ body,html{
         }
         #sidebar ul li{
             margin-top: 0.5em;
-    }
+        }
    
 .nav-footer{
     color: white;
@@ -270,7 +270,16 @@ body,html{
 @media screen and (max-width:768px){
     #sidebar{
         margin-left: -300px;
-        overflow-y: scroll;
+        overflow-y: auto;
+    }
+    #sidebar ul{
+        margin-top:0;
+    }
+    #sidebar ul li{
+        margin-top: 0;
+    }
+    #sidebar::-webkit-scrollbar{
+        width:30px;
     }
     
     
@@ -295,10 +304,14 @@ body,html{
 
 }
 
-@media screen and(min-width:1280px){
+@media(min-width:769px){
+    #sidebar{
+        margin-left: 0;
+    }
     #sidebar.active{
         margin-left: 0;
     }
+
     
     
     
