@@ -68,9 +68,7 @@ if($(window).width()<=768){
       });
 
       $("#sidebarcollapse").on('click',function(){
-          if($('#sidebar').hasClass('active')===true){
-              $("#sidebarcollapse").css({marginRight:0})
-          }
+         
         $("#sidebar").toggleClass('active');
         $("#sidebar").toggleClass("in");
       });
