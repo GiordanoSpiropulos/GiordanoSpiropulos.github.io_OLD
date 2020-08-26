@@ -1,6 +1,13 @@
- 
 
 $(document).ready(function(){
+   
+    
+if($(window).width()<=768){
+    $("#nav-footer").empty();
+} 
+
+
+
     $(".inicio").fadeIn(4000);
 
     var $target = $('.anime'),
@@ -61,10 +68,16 @@ $(document).ready(function(){
       });
 
       $("#sidebarcollapse").on('click',function(){
+          if($('#sidebar').hasClass('active')===true){
+              $("#sidebarcollapse").css({marginRight:0})
+          }
         $("#sidebar").toggleClass('active');
         $("#sidebar").toggleClass("in");
       });
+
       
+      
+
 
       
   
