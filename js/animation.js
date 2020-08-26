@@ -1,8 +1,6 @@
 
 $(document).ready(function(){
-    if($(window).width()<=768){
-        $("#nav-footer").remove();
-    } 
+
     $(".inicio").fadeIn(4000);
 
     var $target = $('.anime'),

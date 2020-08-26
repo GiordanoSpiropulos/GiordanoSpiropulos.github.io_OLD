@@ -273,24 +273,16 @@ body,html{
         margin-left: 0;
     }
     
-
     .contato, .informacao, .sobre, .hero h1, .hero h2{
         padding-left:0;
+    }
+    .nav-footer{
+        display: none;
     }
    
 
 }
-@media screen and(max-width:1279px){
-    #sidebar{
-        margin-left: -300px;
-    }
-    #sidebar.active{
-        margin-left: 0;
-    }
-    .contato, .informacao, .sobre, .hero h1, .hero h2{
-        padding-left:0;
-    }
-}
+
 @media(min-width:1280px){
     #sidebar.active{
         margin-left: 0;
