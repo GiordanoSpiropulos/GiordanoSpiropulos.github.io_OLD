@@ -26,9 +26,8 @@ body,html{
     background:#141f33;
     color: #C0C0C0;
     transition: all .5s linear;
-    
-   
 }
+
         #sidebar a {
             color: #C0C0C0;
         }
@@ -266,42 +265,26 @@ body,html{
 }
 
 
-
+/*Responsividade*/
 @media screen and (max-width:768px){
     #sidebar{
         margin-left: -300px;
         overflow-y: auto;
     }
-    #sidebar ul{
-        margin-top:0;
-    }
-    #sidebar ul li{
-        margin-top: 0;
-    }
-    #sidebar::-webkit-scrollbar{
-        width:30px;
-    }
+    #sidebar ul{ margin-top:0;}
+    #sidebar ul li{margin-top: 0;}
     
-    
-    #sidebar.active{
-        margin-left: 0;
-    }
-    #sidebarcollapse{
-        
-        display: inline;
-    }
-    
-    .contato, .informacao, .sobre, .hero h1, .hero h2{
-        padding-left:0;
-    }
-    .nav-footer{
-        display: none;
-    }
-   
-    hr.divider{
-        display: none;
-   }
+    #sidebar.active{margin-left: 0; }
+    #sidebarcollapse{ display: inline; }
+    .contato, .informacao, .sobre, .hero h1, .hero h2{padding-left:0;}
+    .nav-footer{display: none; }
+    hr.divider{display: none;}
 
+}
+@media(max-height:690px){
+    .nav-footer{display: none;}
+    #sidebar{overflow-y:auto;}
+    
 }
 
 @media(min-width:769px){
