@@ -3,7 +3,7 @@ $(document).ready(function(){
    
     
 if($(window).width()<=768){
-    $("#nav-footer").empty();
+    $("#nav-footer").remove();
 } 
 
 
