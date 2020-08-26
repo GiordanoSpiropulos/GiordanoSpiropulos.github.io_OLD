@@ -1,0 +1,284 @@
+html{
+    font-size:calc(1em+1vw)
+}
+
+body,html{
+    height:100%;
+    font-family: "Roboto";
+    background-color:white;
+    color: black;
+    scroll-behavior: smooth;
+}
+
+
+/* Tudo relacionado a SideBar */
+#sidebar{    
+   
+    width:300px;
+
+
+    position: fixed;
+    top:0;
+    left:0;
+    bottom: 0;
+    height: 100%;
+    z-index: 999;
+    background:#141f33;
+    color: #C0C0C0;
+    transition: all .5s linear;
+    
+   
+}
+        #sidebar a {
+            color: #C0C0C0;
+        }
+        #sidebar h3{
+            text-align: center;
+            font-size: 1.6em;
+            color: white;
+        }
+        
+        #sidebar img{
+            width:  55%;
+            height: 55%;
+            position: top;
+            margin-top: 2em;
+            
+        }
+
+        #sidebar ul{
+            margin-top:1.0em;
+        }
+        #sidebar ul li{
+            margin-top: 0.5em;
+    }
+   
+#nav-footer{
+    color: white;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+       
+       
+ }
+
+ hr.divider{
+     border-top: 1px solid #0e1725;
+}
+  
+.far,.fas{
+     margin-right: 1.2em;
+ }
+ .fab{
+     align-items: center;
+     align-content: center;
+     display: flex;
+ } 
+  
+  #social-media a{
+      margin:10px 2px;
+      border-radius: 50%;
+      display: inline-block;
+      line-height:36px;
+      width: 36px;
+      background-color:#2b3547;
+  }
+  
+    #info i{
+        margin-left:2px;
+    }
+
+
+ /* Página em si */
+
+.hero{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../img/hero.jpg) top center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    color:white;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+
+}
+    .hero h1{
+        font-size:64px;
+        padding-left: 150px;
+       
+    }
+    .hero h2{
+        padding-left: 150px;
+    }
+
+.inicio{display: none;}
+
+.container-fluid{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+
+#main ul{
+    list-style: none;  
+    }
+    #main ul li::before{
+       content: "\003e";
+        font-size: 1.8em;
+        color: #64b5d4;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+ /*As barras de baixo dos titulos */   
+.borderhead:after{ 
+        content: ""; 
+        display: block; 
+        width: 15%;
+        padding-top: 5px; 
+        margin: 0 auto;
+        border-bottom: 0.1em solid #64b5d4; 
+}
+.sobre{
+    padding-left: 150px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    
+}
+    .sobre h1,h3{
+        color:#495978;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+
+    }
+    .sobre p {
+        text-align: center;
+    }
+    .sobre p,ul li{
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+
+.informacao{
+    padding-left: 150px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color:#f9f4fff3;
+    background-position: fixed;
+    
+}
+    .informacao h1 ,h3{
+        color:#495978;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    .informacao ul li{
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+.contato{
+        padding-left: 150px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    
+}
+    .contato h1 ,h3{
+        color:#495978;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    .contato ul li{
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+#curriculo{
+    width: 30%;
+    height: 30%;
+    cursor: zoom-in;
+    display:none;
+}
+
+/*Animação do curriculo abrindo e fechando*/
+#overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.5) none 50% / contain no-repeat;
+    cursor: pointer;
+    transition: 0.3s;
+
+    visibility: hidden;
+    opacity: 0;
+  }
+  body #overlay.open {
+    visibility: visible;
+    opacity: 1;
+    cursor:zoom-out;
+
+ 
+  }
+
+/*Animação de slide*/
+.anime{
+ opacity: 0;
+ transform: translate3d(-100px,0,0);
+ transition:.6s;
+
+}
+.anime-start{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+
+#sidebarcollapse{
+    position: fixed;
+    top:15px;
+    right: 15px;
+    border-radius: 50%;
+    outline: none;
+    width: 40px;
+    height: 36px;
+    border-color:#141f33;
+    background: #141f33;
+    transition: all 0.5s linear;
+    
+    
+}
+  #sidebarcollapse .fas{
+        color:#72bcd4;
+    }
+   
+#sidebar.active{
+    margin-left: -300px;
+}
+@media(max-width:1586px){
+    #sidebar{
+        margin-left: -300px;
+    }
+    #sidebar.active{
+        margin-left: 0;
+    }
+
+    .contato, .informacao, .sobre, .hero h1, .hero h2{
+        padding-left:0;
+    }
+}
+@media(min-width:1586px){
+    #sidebarcollapse{
+        margin-right: -60px;
+        
+    }
+}
+  
+   
